@@ -1,0 +1,1 @@
+swagger generate server -A measurements -f ./swagger.yml

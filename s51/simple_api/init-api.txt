@@ -1,0 +1,7 @@
+swagger init spec \
+  --title "Sensor readings" \
+  --description "Return sensor readings from database" \
+  --version 1.0.0 \
+  --scheme http \
+  --consumes application/network.golang.demoapi-measurement.v1+json \
+  --produces application/network.golang.demoapi-list.v1+json

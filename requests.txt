@@ -1,0 +1,13 @@
+POST
+
+curl -i --header "Content-Type: application/json" --request POST --data '{"data" : "save this", "onetime" : false}' http://localhost:8080/api/note
+
+onetime
+
+curl -i --header "Content-Type: application/json" --request POST --data '{"data" : "save this one time", "onetime" : true}' http://localhost:8080/api/note
+
+
+GET
+
+curl -i  http://localhost:8080/api/note/cce1c73b-2d87-490c-b129-3e1b200d3f30
+

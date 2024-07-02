@@ -1,0 +1,13 @@
+POST
+
+curl -i --insecure --header "Content-Type: application/json" --request POST --data '{"data" : "save this", "onetime" : false}' https://localhost:8443/api/note
+
+onetime
+
+curl -i --insecure --header "Content-Type: application/json" --request POST --data '{"data" : "save this one time", "onetime" : true}' https://localhost:8443/api/note
+
+
+GET
+
+curl -i --insecure https://localhost:8443/api/note/9d73bb30-8240-46ba-9818-a3c4b7113f36
+

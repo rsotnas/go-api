@@ -1,0 +1,42 @@
+consumes:
+    - application/network.golang.demoapi-measurement.v1+json
+info:
+    description: Return sensor readings from database
+    title: Sensor readings
+    version: 1.0.0
+paths: {}
+produces:
+    - application/network.golang.demoapi-list.v1+json
+schemes:
+    - http
+swagger: "2.0"
+definitions:
+    measurement:
+        type: object
+        required: 
+            - timeTaken
+            - sensor
+            - value
+        properties:
+            timeTaken: 
+                type: string
+                format: date-time
+            sensor:
+                type: string
+                minLength: 8
+            value: 
+                type: string
+paths:
+    /measurements:
+        get:
+            tags:
+                - measurements
+            responses:
+                200:
+                    description: List of measurements
+                    schema:
+                        type: array
+                        items:
+                            $ref: "#/definitions/measurement"
+
+
